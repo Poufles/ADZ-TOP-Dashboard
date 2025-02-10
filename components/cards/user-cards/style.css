@@ -3,9 +3,73 @@
 :root {
     --primary-color: #16161D;
     --secondary-color: #FBFAF5;
+    --danger-color: #FF1B1E;
+    --editorial: #FFF25F;
     font-family: 'Saira', sans-serif;
 }
 
 body {
     height: 100dvh;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+article#user-card {
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 10px var(--danger-color);
+    border-radius: 7px;
+    color: var(--secondary-color);
+    cursor: pointer;
+    height: 250px;
+    width: 200px;
+    padding: 15px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+        "title action"
+        "text text"
+    ;
+}
+
+#user-card>#title {
+    grid-area: title;
+
+    font-size: 20px;
+    font-weight: bold;
+    height: max-content;
+}
+
+#user-card>#action-button {
+    grid-area: action;
+    
+    height: max-content;
+    justify-self: end;
+}
+
+#user-card>#action-button>button {
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    background-color: transparent;
+}
+
+#user-card>#action-button>button>svg {
+    height: 16px;
+    width: 16px;
+}
+
+#user-card>#action-button>#edit>svg {
+    stroke: var(--editorial);
+}
+
+#user-card>#action-button>#delete>svg {
+    stroke: var(--danger-color);
+}
+
+#user-card>#text {
+    grid-area: text;
+    
+    font-size: 14px;
 }
