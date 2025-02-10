@@ -1,0 +1,96 @@
+@import url('https://fonts.cdnfonts.com/css/saira');
+
+:root {
+    --primary-color: #16161D;
+    --secondary-color: #FBFAF5;
+    font-family: 'Saira', sans-serif;
+}
+
+body {
+    height: 100dvh;
+}
+
+svg {
+    fill: var(--secondary-color);
+}
+
+.text {
+    color: var(--secondary-color);
+}
+
+#sidebar {
+    background-color: var(--primary-color);
+    width: 300px;
+    min-height: 100dvh;
+    padding: 40px 0;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: max-content;
+}
+
+#sidebar>#title,
+#sidebar>nav>div {
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#sidebar>#title {
+    width: 300px;
+    padding: 0 30px;
+}
+
+#sidebar>#title>input[type=checkbox] {
+    display: none;
+}
+
+#sidebar:has(input[type=checkbox]#hamburger:checked) {
+    width: 92px;
+}
+
+#sidebar:has(input[type=checkbox]#hamburger:checked) .text,
+#sidebar .text::selection {
+    color: transparent;
+}
+
+#sidebar>#title>.text {
+    font-size: 36px;
+}
+
+#sidebar>nav {
+    margin-top: 30px;
+}
+
+#sidebar>nav>div {
+    background-color: var(--primary-color);
+    font-size: 24px;
+    padding: 13px 30px;
+
+    &:hover {
+        box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.07);
+    }
+}
+
+#sidebar>nav>div:first-of-type {
+    box-shadow: inset 0 0 0 10em rgba(0, 0, 0, 0.5);
+}
+
+#sidebar>nav>div:not(:nth-of-type(3), :last-of-type)>svg {
+    fill: var(--secondary-color);
+    stroke: var(--secondary-color);
+    width: 25px;
+    height: 25px;
+}
+
+#sidebar>nav>div:is(:nth-of-type(3), :last-of-type)>svg {
+    fill: var(--secondary-color);
+    width: 25px;
+    height: 25px;
+}
+
+#sidebar>#author {
+    font-size: 12px;
+    align-self: flex-end;
+    justify-self: center;
+}
