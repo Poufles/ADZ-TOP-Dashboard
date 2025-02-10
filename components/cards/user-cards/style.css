@@ -75,6 +75,7 @@ article.task {
 .task>#action-button>button>svg {
     height: 16px;
     width: 16px;
+    transition: 0.2s;
 }
 
 .note>#action-button>#edit>svg,
@@ -82,9 +83,19 @@ article.task {
     stroke: var(--editorial);
 }
 
+.note>#action-button>#edit>svg:hover,
+.task>#action-button>#edit>svg:hover {
+    filter: drop-shadow(0px 2px 4px var(--editorial));
+}
+
 .note>#action-button>#delete>svg,
 .task>#action-button>#delete>svg {
     stroke: var(--danger-color);
+}
+
+.note>#action-button>#delete>svg:hover,
+.task>#action-button>#delete>svg:hover {
+    filter: drop-shadow(0px 2px 4px var(--danger-color));
 }
 
 .note>#text {
@@ -132,4 +143,8 @@ article.task {
 
 .task>#due {
     grid-area: due;
+}
+
+.task>#due>span {
+    color: var(--danger-color);
 }
