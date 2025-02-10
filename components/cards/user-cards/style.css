@@ -5,18 +5,20 @@
     --secondary-color: #FBFAF5;
     --danger-color: #FF1B1E;
     --editorial: #FFF25F;
+    --confirmed: #1BFF3D;
     font-family: 'Saira', sans-serif;
 }
 
 body {
     height: 100dvh;
     display: flex;
-    gap: 20px;
+    gap: 30px;
     align-items: center;
     justify-content: center;
 }
 
-article#user-card {
+article.note,
+article.task {
     background-color: var(--primary-color);
     box-shadow: 0 4px 10px var(--danger-color);
     border-radius: 7px;
@@ -27,13 +29,25 @@ article#user-card {
     padding: 15px;
     display: grid;
     grid-template-rows: auto 1fr;
-    grid-template-areas: 
+}
+
+article.note {
+    grid-template-areas:
         "title action"
         "text text"
     ;
 }
 
-#user-card>#title {
+article.task {
+    grid-template-areas:
+        "title action"
+        "list list"
+        "due due"
+    ;
+}
+
+.note>#title,
+.task>#title {
     grid-area: title;
 
     font-size: 20px;
@@ -41,35 +55,81 @@ article#user-card {
     height: max-content;
 }
 
-#user-card>#action-button {
+.note>#action-button,
+.task>#action-button {
     grid-area: action;
-    
+
     height: max-content;
     justify-self: end;
 }
 
-#user-card>#action-button>button {
+.note>#action-button>button,
+.task>#action-button>button {
     border: none;
     cursor: pointer;
     padding: 5px;
     background-color: transparent;
 }
 
-#user-card>#action-button>button>svg {
+.note>#action-button>button>svg,
+.task>#action-button>button>svg {
     height: 16px;
     width: 16px;
 }
 
-#user-card>#action-button>#edit>svg {
+.note>#action-button>#edit>svg,
+.task>#action-button>#edit>svg {
     stroke: var(--editorial);
 }
 
-#user-card>#action-button>#delete>svg {
+.note>#action-button>#delete>svg,
+.task>#action-button>#delete>svg {
     stroke: var(--danger-color);
 }
 
-#user-card>#text {
+.note>#text {
     grid-area: text;
-    
+
     font-size: 14px;
+}
+
+.task>#list {
+    grid-area: list;
+
+    list-style: none;
+    padding: 0;
+}
+
+.task>#list li:not(:last-of-type) {
+    margin-bottom: 5px;
+}
+
+.task>#list input[type=checkbox] {
+    display: none;
+    position: relative;
+}
+
+.task>#list>li>input[type=checkbox]:checked+label::before {
+    background-color: var(--confirmed);
+}
+
+.task>#list>li>label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.task>#list>li>label::before {
+    content: '';
+    border: 2px solid var(--secondary-color);
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    transition: 0.2s;
+    display: inline-block;
+}
+
+.task>#due {
+    grid-area: due;
 }
