@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../src/css-reset-jc.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Side Cards Component</title>
+</head>
+
+<body>
+    <article class="due container" id="side-card">
+        <div id="title">
+            <?xml version="1.0" ?><svg height="512" viewBox="0 0 512 512" width="512"
+                xmlns="http://www.w3.org/2000/svg">
+                <title />
+                <path
+                    d="M85.57,446.25H426.43a32,32,0,0,0,28.17-47.17L284.18,82.58c-12.09-22.44-44.27-22.44-56.36,0L57.4,399.08A32,32,0,0,0,85.57,446.25Z"
+                    style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                <path d="M250.26,195.39l5.74,122,5.73-121.95a5.74,5.74,0,0,0-5.79-6h0A5.74,5.74,0,0,0,250.26,195.39Z"
+                    style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                <path d="M256,397.25a20,20,0,1,1,20-20A20,20,0,0,1,256,397.25Z" />
+            </svg>
+            <p id="text">
+                Due Soon!
+            </p>
+        </div>
+        <div id="task" class="container due">
+            <div class="container" id="event">
+                <div id="title" class="container">
+                    <?xml version="1.0" ?><svg height="24" viewBox="0 0 24 24" width="24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M5 22h14c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2h-2a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1H5c-1.103 0-2 .897-2 2v15c0 1.103.897 2 2 2zM5 5h2v2h10V5h2v15H5V5z" />
+                        <path d="m11 13.586-1.793-1.793-1.414 1.414L11 16.414l5.207-5.207-1.414-1.414z" />
+                    </svg>
+                    <p id="text">
+                        Task Name
+                    </p>
+                </div>
+                <p id="due-date">
+                    Due Date: dd/mm/yy
+                </p>
+            </div>
+            <div class="container" id="event">
+                <div id="title" class="container">
+                    <?xml version="1.0" ?><svg height="24" viewBox="0 0 24 24" width="24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M5 22h14c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2h-2a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1H5c-1.103 0-2 .897-2 2v15c0 1.103.897 2 2 2zM5 5h2v2h10V5h2v15H5V5z" />
+                        <path d="m11 13.586-1.793-1.793-1.414 1.414L11 16.414l5.207-5.207-1.414-1.414z" />
+                    </svg>
+                    <p id="text">
+                        Task Name
+                    </p>
+                </div>
+                <p id="due-date">
+                    Due Date: dd/mm/yy
+                </p>
+            </div>
+        </div>
+    </article>
+    <article class="recent container" id="side-card">
+        <div id="title">
+            <?xml version="1.0" ?><svg class="bi bi-folder" fill="currentColor" height="16" viewBox="0 0 16 16"
+                width="16" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M.54 3.87.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.826a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31zM2.19 4a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91h10.348a1 1 0 0 0 .995-.91l.637-7A1 1 0 0 0 13.81 4H2.19zm4.69-1.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139C1.72 3.042 1.95 3 2.19 3h5.396l-.707-.707z" />
+            </svg>
+            <p id="text">
+                Recently Opened
+            </p>
+        </div>
+        <div id="task" class="container opened">
+            <div class="container" id="event-note">
+                <div id="title" class="container">
+                    <?xml version="1.0" ?><svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M448 348.106V80c0-26.51-21.49-48-48-48H48C21.49 32 0 53.49 0 80v351.988c0 26.51 21.49 48 48 48h268.118a48 48 0 0 0 33.941-14.059l83.882-83.882A48 48 0 0 0 448 348.106zm-128 80v-76.118h76.118L320 428.106zM400 80v223.988H296c-13.255 0-24 10.745-24 24v104H48V80h352z" />
+                    </svg>
+                    <p id="text">
+                        Note Name
+                    </p>
+                </div>
+                <p id="due-date">
+                    Opened: dd/mm/yy
+                </p>
+            </div>
+            <div class="container" id="event">
+                <div id="title" class="container">
+                    <?xml version="1.0" ?><svg height="24" viewBox="0 0 24 24" width="24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M5 22h14c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2h-2a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1H5c-1.103 0-2 .897-2 2v15c0 1.103.897 2 2 2zM5 5h2v2h10V5h2v15H5V5z" />
+                        <path d="m11 13.586-1.793-1.793-1.414 1.414L11 16.414l5.207-5.207-1.414-1.414z" />
+                    </svg>
+                    <p id="text">
+                        Task Name
+                    </p>
+                </div>
+                <p id="due-date">
+                    Opened: dd/mm/yy
+                </p>
+            </div>
+        </div>
+    </article>
+</body>
+
+</html>
