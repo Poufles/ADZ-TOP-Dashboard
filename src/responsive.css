@@ -1,0 +1,61 @@
+@media screen and (max-width: 1280px) {
+
+    main {
+        grid-template-areas:
+            "sidebar navbar navbar"
+            "sidebar actions actions"
+            "sidebar aside aside"
+            "sidebar content content"
+        ;
+    }
+
+    aside#panel {
+        margin-bottom: 30px;
+        padding-left: 75px;
+        padding-right: 60px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    article#side-card {
+        height: max-content;
+        max-height: 375px;
+    }
+
+}
+
+@media screen and (max-width: 1080px) {
+
+    main {
+        position: relative;
+        grid-template-areas:
+            "navbar navbar navbar"
+            "actions actions actions"
+            "aside aside aside"
+            "content content content"
+        ;
+    }
+
+    aside#sidebar {
+        grid-area: none;
+
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    nav#navbar {
+        grid-area: navbar;
+    
+        padding: 40px;
+    }
+
+    section#actions,
+    section#content,
+    aside#panel {
+        padding: 0 40px;
+    }
+
+}
