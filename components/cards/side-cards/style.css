@@ -14,7 +14,8 @@ article#side-card {
     border-radius: 7px;
     box-shadow: 0 4px 4px #000;
     height: 375px;
-    width: 275px;
+    width: 100%;
+    min-width: 275px;
     padding: 15px 0;
     display: flex;
     gap: 10px;
