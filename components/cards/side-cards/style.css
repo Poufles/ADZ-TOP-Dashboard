@@ -9,14 +9,6 @@
     font-family: 'Saira', sans-serif;
 }
 
-body {
-    height: 100dvh;
-    display: flex;
-    gap: 30px;
-    align-items: center;
-    justify-content: center;
-}
-
 article#side-card {
     background-color: var(--primary-color);
     border-radius: 7px;
