@@ -16,3 +16,28 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+#search {
+    background-color: var(--primary-color);
+    border-radius: 15px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 0 15px;
+    width: 560px;
+    min-width: 350px;
+}
+
+#search>#user-search-item {
+    background-color: transparent;
+    border: none;
+    color: var(--secondary-color);
+    font-size: 16px;
+    text-align: end;
+    height: 34px;
+    width: 100%;
+    outline: none;
+}
+
+#search>#user-search-item::selection {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
