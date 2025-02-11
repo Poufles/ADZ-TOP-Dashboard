@@ -1,0 +1,18 @@
+@import url('https://fonts.cdnfonts.com/css/saira');
+
+:root {
+    --primary-color: #16161D;
+    --secondary-color: #FBFAF5;
+    --danger-color: #FF1B1E;
+    --editorial: #FFF25F;
+    --confirmed: #1BFF3D;
+    font-family: 'Saira', sans-serif;
+}
+
+body {
+    height: 100dvh;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
