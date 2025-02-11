@@ -10,10 +10,6 @@ body {
     height: 100dvh;
 }
 
-svg {
-    fill: var(--secondary-color);
-}
-
 .text {
     color: var(--secondary-color);
 }
@@ -26,6 +22,10 @@ svg {
     overflow: hidden;
     display: grid;
     grid-template-rows: max-content;
+}
+
+#sidebar svg {
+    fill: var(--secondary-color);
 }
 
 #sidebar>#title,

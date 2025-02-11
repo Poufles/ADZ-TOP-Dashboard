@@ -38,6 +38,6 @@ button.icon>svg {
     fill: var(--secondary-color);
 }
 
-button.icon:nth-of-type(4)>svg {
-    stroke: var(--secondary-color)
+button.icon#icon-grid>svg {
+    stroke: var(--secondary-color);
 }
