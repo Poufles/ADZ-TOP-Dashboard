@@ -68,7 +68,7 @@ section#actions {
 
     margin-bottom: 30px;
     padding-left: 75px;
-    padding-right: 20px;
+    padding-right: 60px;
     display: flex;
     gap: 10px;
     justify-content: space-between;
@@ -78,11 +78,11 @@ section#content {
     grid-area: content;
 
     padding-left: 75px;
-    padding-right: 20px;
+    padding-right: 60px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-template-rows: auto 1fr;
-    row-gap: 30px;
+    grid-template-rows: auto auto 1fr;
+    gap: 30px;
 }
 
 aside#panel {
