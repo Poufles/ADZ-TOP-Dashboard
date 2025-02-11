@@ -1,0 +1,51 @@
+@import url('https://fonts.cdnfonts.com/css/saira');
+
+:root {
+    --primary-color: #16161D;
+    --secondary-color: #FBFAF5;
+    --danger-color: #FF1B1E;
+    --editorial: #FFF25F;
+    --confirmed: #1BFF3D;
+    font-family: 'Saira', sans-serif;
+}
+
+body {
+    height: 100dvh;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+button.icon {
+    background-color: var(--primary-color);
+    border: none;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    width: 34px;
+    height: 34px;
+    transition: 0.2s;
+}
+
+button.icon:hover {
+    transform: scale(1.15);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+button.icon.circle {
+    border-radius: 50%;
+}
+
+button.icon.square {
+    border-radius: 5px;
+}
+
+button.icon>svg {
+    width: 25px;
+    height: 25px;
+    fill: var(--secondary-color);
+}
+
+button.icon:nth-of-type(4)>svg {
+    stroke: var(--secondary-color)
+}
